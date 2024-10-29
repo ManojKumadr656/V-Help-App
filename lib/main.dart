@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// made changes
+
 class SectionTitle extends StatelessWidget {
   final String title;
   const SectionTitle({super.key, required this.title});
