@@ -1,5 +1,22 @@
 import 'package:flutter/material.dart';
 
+
+class SectionTitle extends StatelessWidget {
+  final String title;
+  const SectionTitle({super.key, required this.title});
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: const TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.normal,
+        color: Colors.black,
+      ),
+    );
+  }
+}
+
 class myapp extends StatelessWidget {
   const myapp({super.key});
   @override
@@ -19,7 +36,7 @@ class myapp extends StatelessWidget {
                   color: Colors.blue,
                 ),
                 child: Text(
-                  'Drawer Header',
+                  'Options',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -27,16 +44,16 @@ class myapp extends StatelessWidget {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.home),
-                title: Text('Home'),
+                leading: const Icon(Icons.home),
+                title: const Text('Home'),
                 onTap: () {
                   // Handle navigation or action for Home
                   Navigator.pop(context); // Close the drawer
                 },
               ),
               ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Settings'),
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
                 onTap: () {
                   // Handle navigation or action for Settings
                   Navigator.pop(context); // Close the drawer
@@ -46,45 +63,134 @@ class myapp extends StatelessWidget {
           ),
         ),
         body: Center(
-        child:  Column(
-           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-             Container(
-  width: 300.0, // Set the width of the container
-  height: 100.0, // Set the height of the container
-  decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(8.0), // Add border radius here
-        ),
-  child: const Center( // Center the content inside the container
-    child: Text(
-      'mobile / Laptop repair',
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 16.0,
-      ),
-    ),
-  ),
-),
-Container(
-  width: 300.0, // Set the width of the container
-  height: 100.0, // Set the height of the container
-  decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(8.0), // Add border radius here
-        ),
-  child: const Center( // Center the content inside the container
-    child: Text(
-      'mobile',
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 16.0,
-      ),
-    ),
-  ),
-)
-          ]
-        ),
+          child: SingleChildScrollView(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const SizedBox(height: 20),
+                  const SectionTitle(title: 'Recently acessed'),
+                  Container(
+                    width: 300.0, // Set the width of the container
+                    height: 80.0, // Set the height of the container
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius:
+                          BorderRadius.circular(8.0), // Add border radius here
+                    ),
+                    child: const Center(
+                      // Center the content inside the container
+                      child: Text(
+                        'mobile / Laptop repair',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  const SectionTitle(title: 'Trending'),
+                  Container(
+                    width: 300.0, // Set the width of the container
+                    height: 80.0, // Set the height of the container
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius:
+                          BorderRadius.circular(8.0), // Add border radius here
+                    ),
+                    child: const Center(
+                      // Center the content inside the container
+                      child: Text(
+                        'mobile',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: 300.0, // Set the width of the container
+                    height: 80.0, // Set the height of the container
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius:
+                          BorderRadius.circular(8.0), // Add border radius here
+                    ),
+                    child: const Center(
+                      // Center the content inside the container
+                      child: Text(
+                        'study material',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: 300.0, // Set the width of the container
+                    height: 80.0, // Set the height of the container
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius:
+                          BorderRadius.circular(8.0), // Add border radius here
+                    ),
+                    child: const Center(
+                      // Center the content inside the container
+                      child: Text(
+                        'food outlet',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: 300.0, // Set the width of the container
+                    height: 80.0, // Set the height of the container
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius:
+                          BorderRadius.circular(8.0), // Add border radius here
+                    ),
+                    child: const Center(
+                      // Center the content inside the container
+                      child: Text(
+                        'lost and found',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: 300.0, // Set the width of the container
+                    height: 80.0, // Set the height of the container
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius:
+                          BorderRadius.circular(8.0), // Add border radius here
+                    ),
+                    child: const Center(
+                      // Center the content inside the container
+                      child: Text(
+                        'old products',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ]),
+          ),
         ),
       ),
     );
